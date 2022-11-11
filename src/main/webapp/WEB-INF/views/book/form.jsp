@@ -15,6 +15,7 @@
 <form:form method="post" modelAttribute="book">
     Tytuł: <form:input path="title"/><br>
     Ocena: <form:input path="rating" type="number"/><br>
+    Autorzy: <form:select path="authors" multiple="true" items="${authors}" itemValue="id" itemLabel="fullName"/><br>
     Wydawca <form:select path="publisher">
         <form:option value="0">Wybierz wydawcę</form:option>
         <form:options items="${publisherList}" itemValue="id" itemLabel="name"/>
